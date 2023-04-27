@@ -2,17 +2,20 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>Epitech Documentation + Survival Guide</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/reuban-bryenton/epitech-unofficial-docs',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/reuban-bryenton/epitech-unofficial-docs/tree/main/',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Epitech Documentation + Survival Guide - Reuban Bryenton',
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s - Epitech Docs'
+    }
+  }
 }
+
 
 export default config

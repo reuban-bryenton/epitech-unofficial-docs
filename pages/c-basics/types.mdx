@@ -1,0 +1,42 @@
+import { Callout } from 'nextra-theme-docs'
+
+# C Basics - Types
+
+In the world of C, using the correct types can make or break your code so choose wisely!
+
+## Integer Types
+
+<Callout type="info" emoji="ℹ️">
+  Integer (or int) is a **whole** number.
+</Callout>
+
+| Type | Minimum Value | Maximum Value | Size (Bytes) |
+| ---- | ------------- | ------------- | ------------ |
+| char | -128 / 0 | 127 / 255 | 1 |
+| unsigned char | 0 | 255 | 1 |
+| signed char | -128 | 255 | 1 |
+| int | -2,147,483,648 | 2,147,483,647 | 4 |
+| unsigned int | 0 | 4,294,967,295 | 4 |
+| long | -9,223,372,036,854,775,808 | 9,223,372,036,854,775,807 | 8 |
+| unsigned long | 0 | 18,446,744,073,709,551,615 | 8 |
+| short | -32,768 | 32,767 | 2 |
+| unsigned short | 0 |65,535 | 2 |
+
+<Callout type="warning" emoji="⚠️">
+  The `char` type even though it is used for characters, it stores the [ascii](http://manpagesfr.free.fr/man/man7/ascii.7.html) value as an **integer type**.
+
+  For examlpe the letter 'B' if used in code represents the number 42.
+</Callout>
+
+## Floating-Point Types
+
+<Callout type="info" emoji="ℹ️">
+  Floating-Point numbers are numbers that can have decimal places.
+</Callout>
+
+| Type | Minimum Value | Maximum Value | Precision | Size (Bytes) |
+| ---- | ------------- | ------------- | --------- | ------------ |
+| float | 1.2E-38 | 1.2E+38 | 6 decimal places | 4 |
+| double | 2.3E-308 | 2.3E+308 | 15 decimal places | 8 |
+| long double | 3.4E-4932 | 3.4E+4932 | 19 decimal places | 10 |
+

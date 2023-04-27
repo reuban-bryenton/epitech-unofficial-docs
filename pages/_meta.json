@@ -1,15 +1,13 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "index": "ℹ️ Introduction",
+  "windows-activation": "🪟 Windows Activation",
+  "c-basics": "👨‍🏫 C Basics",
+  "makefiles": "🏗️ Makefiles",
+  "bashrc": "👨‍💻 Bashrc File",
   "contact": {
-    "title": "Contact ↗",
+    "title": "📧 Contact",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://instagram.com/reuban_bryenton",
     "newWindow": true
   }
 }

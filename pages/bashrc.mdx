@@ -1,0 +1,41 @@
+import { Callout } from 'nextra-theme-docs'
+
+# Bashrc File
+
+The bashrc file is located in `~/.bashrc`, this file is used to create aliases, shortcuts, terminal MOTDs and more.
+
+Here are a list of usefull commands to make aliases for:
+
+```bash filename="~/.bashrc" copy
+## Git
+alias gitlog="log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+
+## Make
+alias mk="clear; make re"
+alias mkcl="make clean; clear"
+alias ff="make fclean; clear"
+alias debug="clear; make debug"
+alias bonus="clear; make bonus"
+alias tests="clear; make tests"
+
+## System
+alias reboot="sudo reboot"
+alias shutdown="sudo shutdown now"
+alias dnf="sudo dnf"
+alias update="sudo dnf upgrade"
+alias uninstall="sudo dnf remove"
+alias uninstall_deps="sudo dnf autoremove"
+alias bashrc="nvim ~./bashrc"
+alias home="cd"
+alias back="cd -"
+alias cdup="cd .."
+alias c="clear"
+
+## Banner
+echo " ______ _____ _____ _______ ______ _____ _    _ "
+echo "|  ____|  __ \_   _|__   __|  ____/ ____| |  | |"
+echo "| |__  | |__| || |    | |  | |__ | |    | |__| |"
+echo "|  __| |  ___/ | |    | |  |  __|| |    |  __  |"
+echo "| |____| |    _| |_   | |  | |___| |____| |  | |"
+echo "|______|_|   |_____|  |_|  |______\_____|_|  |_|"
+```

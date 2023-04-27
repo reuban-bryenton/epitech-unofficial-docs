@@ -1,0 +1,73 @@
+import { Callout } from 'nextra-theme-docs'
+
+# Makefiles
+
+A Makefile is a file, read by the `Make` program, which executes all the commands and rules in the Makefile.
+
+At EPITECH, you'll be using Makefiles to compile your c code, using **gcc**.
+
+Here is an example of a Makefile to the coding style as of 2023:
+
+```make filename="Makefile" copy
+##
+## EPITECH PROJECT, 2023
+## Project Name
+## File description:
+## Makefile for an epitech project
+##
+
+SRC	=	src/main.c\
+		src/my_function.c\
+		src/my_other_function.c
+
+OBJ	=	$(SRC:.c=.o)
+
+NAME	=	my_binary_name
+
+CFLAGS	=	-Wall -Wextra -I./include
+
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
+	gcc -o $(NAME) $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+fclean:	clean
+	rm -f $(NAME)
+
+re:	fclean all
+
+.PHONY:	all clean fclean re
+```
+
+You can now compile your code using the following commands:
+
+```bash filename="Recompile entire codebase" copy
+make re
+```
+
+```bash filename="Only compile new changes" copy
+make
+```
+
+```bash filename="delete all binary and leftover files" copy
+make fclean
+```
+
+```bash filename="delete only leftover files (not binary)" copy
+make clean
+```
+
+<Callout type="info" emoji="ℹ️">
+  You can also use `make -s` to compile in "silent" mode and only show warnings (if any).
+</Callout>
+
+## Makefile rules
+
+Soon
+
+<Callout type="info" emoji="ℹ️">
+  Making your own `debug`, `tests` and `bonus` rules is recommended to be more productive.
+</Callout>
