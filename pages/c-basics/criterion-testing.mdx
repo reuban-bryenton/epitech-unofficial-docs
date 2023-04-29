@@ -1,4 +1,5 @@
 import { Callout } from 'nextra-theme-docs'
+import { Steps } from 'nextra-theme-docs'
 
 # Criterion Testing
 
@@ -14,9 +15,10 @@ If you haven't installed Criterion yet, please download [install_Criterion.sh](h
 
 ## How to use ?
 
-Once you have created some code you can create a `tests` folder in the root of your project.
+Once you have created some code you can create a `tests` folder in the root of your project to start testing.
 
-### 1. Create a test file
+<Steps>
+### Create a test file
 
 First, you need to create a test file. It will be used to test your code. You can name it `tests.c` for example.
 
@@ -24,7 +26,7 @@ First, you need to create a test file. It will be used to test your code. You ca
   Make sure to include the epitech headders and keep to the epitech coding style.
 </Callout>
 
-### 2. Include Criterion
+### Include Criterion
 
 Then, you need to include the criterion library in your test file. You can do it like this :
 
@@ -32,7 +34,7 @@ Then, you need to include the criterion library in your test file. You can do it
 #include <criterion/criterion.h>
 ```
 
-### 3. Create your tests
+### Create your tests
 
 Now, you can create your tests. You can do it like this :
 
@@ -87,7 +89,7 @@ Test(test_suite, test)
   ```
 </Callout>
 
-### 4. Run your tests
+### Run your tests
 
 Finally, you can run your tests. To do so, you need to compile your tests file with the criterion library. You can do it like this :
 
@@ -101,7 +103,7 @@ Then, you can run your tests like this :
 ./tests
 ```
 
-### 5. Adding tests to the makefile
+### Adding tests to the makefile
 
 You can add a `tests` rule to your makefile to run your tests easily. You can do it like this :
 
@@ -115,6 +117,7 @@ tests:
   You can also run your tests with the `--verbose` flag to get more information about your tests.
 </Callout>
 
-### 6. Enjoy
+### Enjoy
 
 You can now enjoy your tests and make sure your code works as intended.
+</Steps>

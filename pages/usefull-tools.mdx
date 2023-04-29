@@ -1,3 +1,5 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+
 # Usefull Tools
 
 ## My Epitech Percentages
@@ -20,3 +22,67 @@ This tool allows you to see your Epitech percentages. It is available on both ch
 This tool allows you to see your Epitech roadblocks. It is available on chrome:
 - [Chrome Extension](https://chrome.google.com/webstore/detail/epitech-roadblock/foapohjmcdnoijommffjdbefjpakplej?hl=fr)
 
+
+## Gource
+
+[Gource](https://github.com/acaudwell/Gource) is a visualization tool for source control repositories.
+
+The repository is displayed as a tree where the root of the repository is the centre,
+directories are branches and files are leaves. Contributors to the source code appear and disappear as they contribute to specific files and directories.
+
+### Screenshot:
+
+![Gource](https://gource.io/images/gource-git.jpg)
+
+### Installation:
+
+<Tabs items={['fedora', 'ubuntu', 'arch']}>
+  <Tab>
+    ```bash copy
+    sudo dnf install gource
+    ```
+  </Tab>
+  <Tab>
+    ```bash copy
+    sudo apt install gource
+    ```
+  </Tab>
+  <Tab>
+    ```bash copy
+    sudo pacman -S gource
+    ```
+  </Tab>
+</Tabs>
+
+### Usage:
+
+use the `cd` command to go to your projects repository, then just run the following command:
+
+```bash copy
+gource
+```
+
+I also recommend setting an alias as remembering gource is quite hard:
+
+```bash copy
+alias gitsee="gource"
+alias gitseefull="gource -f"
+alias gitseetrans="gource --transparent"
+alias gitseefulltrans="gource -f --transparent"
+```
+
+## Gitmoji
+
+Gitmoji is an initiative to standardize and explain the use of emojis on GitHub commit messages.
+
+Using emojis on commit messages provides an easy way of identifying the purpose or intention of a commit with only looking at the emojis used.
+
+### How to use:
+
+when you commit to github just use the gitmoji syntax:
+
+```bash copy
+git commit -m ":emoji_name: commit message"
+```
+
+Replace `:emoji_name:` with one of the emojis from [this list of emojis](https://gitmoji.dev/).
