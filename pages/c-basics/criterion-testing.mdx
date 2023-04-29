@@ -1,0 +1,120 @@
+import { Callout } from 'nextra-theme-docs'
+
+# Criterion Testing
+
+Criterion is a unit-testing tool that will allow you to test your code efficiently.
+
+## Installation
+
+If you haven't installed Criterion yet, please download [install_Criterion.sh](https://intra.epitech.eu/file/Public/technical-documentations/C/install_criterion.sh) from the intranet, then run it. Criterion will be installed.
+
+<Callout type="info" emoji="ℹ️">
+  You can also find other cool files and documentation located in the [Documents](https://intra.epitech.eu/file/) section of the intranet.
+</Callout>
+
+## How to use ?
+
+Once you have created some code you can create a `tests` folder in the root of your project.
+
+### 1. Create a test file
+
+First, you need to create a test file. It will be used to test your code. You can name it `tests.c` for example.
+
+<Callout type="warning" emoji="⚠️">
+  Make sure to include the epitech headders and keep to the epitech coding style.
+</Callout>
+
+### 2. Include Criterion
+
+Then, you need to include the criterion library in your test file. You can do it like this :
+
+```c filename="tests/tests.c" copy
+#include <criterion/criterion.h>
+```
+
+### 3. Create your tests
+
+Now, you can create your tests. You can do it like this :
+
+```c filename="tests/tests.c" copy
+Test(test_suite_name, test_name)
+{
+    // Your test code
+}
+```
+
+- `test_suite_name` must be the name of a set of tests, which will help you know exactly what part of your code fails.
+- `test_name` is here to help you know which precise test failed, and thus will be usefull to help you debug your code (these should be unique for each test).
+
+#### Asserts
+
+You can use asserts to check if your code works as intended. Here are some examples :
+
+```c filename="tests/tests.c" copy
+Test(test_suite, test)
+{
+    // put any c code you need before the assert statement as asserts will not run code after them
+
+    cr_assert(1 == 1); // acts like an if statement to test code
+    cr_assert(1 == 1 && 1 != 0); // cr_assert works with all operators in c
+    cr_assert_eq(1, 1); // checks if two parameters are equal
+    cr_assert_neq(1, 0); // checks if two parameters are not equal
+    cr_assert_str_eq("Hello", "Hello"); // same as cr_assert_eq but for strings
+    cr_assert_str_neq("Hello", "World");// same as cr_assert_neq but for strings
+    cr_assert_null(NULL); // checks if paremeter is null
+    cr_assert_not_null("Hello"); // checks if paremeter is not null
+    cr_assert_arr_eq((int[]){1, 2, 3}, (int[]){1, 2, 3}, 3); // checks if 2 arrays are the same
+    cr_assert_arr_neq((int[]){1, 2, 3}, (int[]){1, 2, 4}, 3); // checks if 2 arrays are different
+
+    // Note: tests will pass if cr_assert output is true and fail if false
+}
+```
+
+<Callout type="info" emoji="ℹ️">
+  In addition to the condition tested, it is possible to give a string as parameter which will be printed to stderr if the test fails.
+  This optionnal string can take printf-like arguments. For example, you can do something like:
+
+  ```c copy
+  Test(testing_doubles, test_name) {
+      int val = 0;
+      int expected_val = 0;
+      int result = 0;
+
+      expected_val = val * 2;
+      result = my_double(val);
+      cr_assert(result == expected_val, "The result was %d. Expected %d", result, expected_val);
+  }
+  ```
+</Callout>
+
+### 4. Run your tests
+
+Finally, you can run your tests. To do so, you need to compile your tests file with the criterion library. You can do it like this :
+
+```bash copy
+gcc -o tests tests/tests.c -lcriterion
+```
+
+Then, you can run your tests like this :
+
+```bash copy
+./tests
+```
+
+### 5. Adding tests to the makefile
+
+You can add a `tests` rule to your makefile to run your tests easily. You can do it like this :
+
+```makefile filename="Makefile" copy
+tests:
+    gcc -o tests tests/tests.c -lcriterion
+    ./tests
+```
+
+<Callout type="info" emoji="ℹ️">
+  You can also run your tests with the `--verbose` flag to get more information about your tests.
+</Callout>
+
+### 6. Enjoy
+
+You can now enjoy your tests and make sure your code works as intended.
