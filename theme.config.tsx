@@ -14,7 +14,8 @@ const config: DocsThemeConfig = {
     return {
       titleTemplate: '%s - Epitech Docs'
     }
-  }
+  },
+  faviconGlyph: '💻'
 }
 
 

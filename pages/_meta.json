@@ -1,10 +1,18 @@
 {
   "index": "ℹ️ Introduction",
-  "windows-activation": "🪟 Windows Activation",
-  "usefull-tools": "🧰Usefull Tools",
-  "c-basics": "👨‍🏫 C Basics",
-  "makefiles": "🏗️ Makefiles",
-  "bashrc": "👨‍💻 Bashrc File",
+  "-": {
+      "type": "separator",
+      "title": "Coding Guides"
+    },
+    "c-basics": "👨‍🏫 C Basics",
+    "makefiles": "🏗️ Makefiles",
+    "--": {
+        "type": "separator",
+        "title": "Other Guides"
+    },
+    "bashrc": "👨‍💻 Bashrc File",
+    "windows-activation": "🪟 Windows Activation",
+    "usefull-tools": "🧰Usefull Tools",
   "contact": {
     "title": "📧 Contact",
     "type": "page",
